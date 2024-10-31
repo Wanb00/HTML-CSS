@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles.css">
+  <head>
+    <h1 id="title">Survey Form</h1>
+    <p id="description"> Thank you for assisting with this project </p>
+  </head>
+  <body>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label"> Name <input id="name" type="text" placeholder="Sam Robson" required /></label>
+        <label for="email" id="email-label"> Email <input id="email" type="email" placeholder="XXX@gmail.com" required /></label>
+        <label for="number" id="number-label"> Age (optional) <input id="number" type="number" min="1"   max="100" placeholder="25" /></label>
+        <label for="dropdown"> Gender
+        <select id="dropdown">
+          <option> Select gender </option>
+          <option> Female </option>
+          <option> Male </option>
+          <option> Other </option>
+        </select> 
+      </label>
+      </fieldset>
+      <fieldset>
+        <legend> Ethnicity </legend>
+      <label for="race"><input type="radio" name="ethnicity" id="race" value="white" class="inline"> White/Caucasian </label>
+      <label for="race"><input type="radio" name="ethnicity" id="race" value="asian" class="inline"> Asian/Asian British </label>
+      </fieldset>
+      <fieldset>
+        <legend> Where did you find this survey from? </legend>
+      <label for="referral"><input type="checkbox" value="linkedin" class="inline" /> Linkedin </label>
+      <label for="referral"><input type="checkbox" value="glassdoor" class="inline" /> Glassdoor </label>
+      <label for="4years">
+        <legend> Where do you see yourself in 4 years? </legend>
+         <textarea id="4years" value="4years" placeholder="I see myself..."></textarea>
+      </fieldset>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
+
+body{
+    background-color: #1b1b32;
+    color: white;
+    font-size: 22px;
+}
+
+label{
+  display: block;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+textarea {
+  display: block;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #7a7aff;
+  border-color: #7a7aff;
+  min-width: 300px;
+}
